@@ -1,6 +1,9 @@
 describe('Attempts to login with invalid password', () => {
-    it('Navigates to my account page, fills required fields', () => {
+    beforeEach(() => {
         cy.visit('https://migueltestingsite.com')
+    })
+
+    it('Navigates to my account page, fills required fields', () => {
         cy.get('a[href="https://migueltestingsite.com/my-account"]').first().should('have.text', 'My account')
             .click()
 
